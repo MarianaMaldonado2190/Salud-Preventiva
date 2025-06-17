@@ -59,15 +59,15 @@
             if (totalScore >= 7) {
                 icon = '🌟';
                 title = '¡Excelente!';
-                text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tus hábitos de prevención son ejemplares. Sed do eiusmod tempor incididunt ut labore.';
+                text = 'Tus hábitos de prevención son ejemplares.';
             } else if (totalScore >= 4) {
                 icon = '👍';
                 title = 'Muy Bien';
-                text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Tienes buenos hábitos, pero hay espacio para mejorar. Ut enim ad minim veniam.';
+                text = 'Tienes buenos hábitos, pero hay espacio para mejorar.';
             } else {
                 icon = '⚠️';
                 title = 'Necesitas Mejorar';
-                text = 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Es importante que consideres mejorar tus hábitos de prevención. Quis nostrud exercitation.';
+                text = 'Es importante que consideres mejorar tus hábitos de prevención.';
             }
             
             resultIcon.textContent = icon;
