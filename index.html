@@ -11,16 +11,23 @@
     <header>
         <nav>
             <div class="logo">Salud</div>
-            <ul class="nav-links">
-                <li><a href="#home">INICIO</a></li>
-                <li><a href="#about">SOBRE NOSOTROS</a></li>
-                <li><a href="prevención.html">PREVENCIÓN</a></li>
-                <li><a href="#sintomas">SINTOMAS</a></li>
-                <li><a href="#hospitales">HOSPITALES</a></li>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" onclick="closeMenu()">INICIO</a></li>
+                <li><a href="#about" onclick="closeMenu()">SOBRE NOSOTROS</a></li>
+                <li><a href="prevención.html" onclick="closeMenu()">PREVENCIÓN</a></li>
+                <li><a href="#sintomas" onclick="closeMenu()">SINTOMAS</a></li>
+                <li><a href="#hospitales" onclick="closeMenu()">HOSPITALES</a></li>
             </ul>
+            <div class="hamburger" id="hamburger" onclick="toggleMenu()">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
 
+    <!-- Overlay para cerrar menú -->
+    <div class="overlay" id="overlay" onclick="closeMenu()"></div>
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="hero-content">
@@ -46,16 +53,20 @@
                 <p>Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero tempus, blandit posuere and ligula varius magna a porta</p>
             </div>
             <div class="departments-grid">
-                <div class="department-card fade-in"  onclick="location.href='prevencion.html'">
+                <div class="department-card fade-in" id="prevencion.html" >
                     <div class="department-icon">🔬</div>
                     <h3>Prevención</h3>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                    <button class="appointment-button" id="prevencion.html">Ver Mas</button>
+
                 </div>
                 <div class="sintomas" id="sintomas">
                 <div class="department-card fade-in">
                     <div class="department-icon">⚕️</div>
                     <h3>Sintomas</h3>
                     <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
+                    <button class="appointment-button" id="prevencion.html">Ver Mas</button>
+
                 </div>
             </div>
         </div>
@@ -131,7 +142,7 @@
                     <ul>
                         <li><a href="#home">INICIO</a></li>
                         <li><a href="#about">SOBRE NOSOTROS</a></li>
-                        <li><a href="#Prevencion">PREVENCIÓN</a></li>
+                        <li><a href="prevención.html">PREVENCIÓN</a></li>
                         <li><a href="#sintomas">SINTOMAS</a></li>
                         <li><a href="#hospitales">HOSPITALES</a></li>
                     </ul>
@@ -139,9 +150,9 @@
                 <div class="footer-section">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="#">Prevención</a></li>
-                        <li><a href="#">Sintomas</a></li>
-                        <li><a href="#">Hospitales</a></li>
+                        <li><a href="#prevención.html">Prevención</a></li>
+                        <li><a href="#sintimas">Sintomas</a></li>
+                        <li><a href="#hospitales">Hospitales</a></li>
                     </ul>
                 </div>            
               </div>

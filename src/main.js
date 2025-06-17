@@ -1,4 +1,69 @@
-import './style.css'
+function toggleMenu() {
+            console.log('Toggle menu clicked'); // Para debug
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.getElementById('hamburger');
+            const overlay = document.getElementById('overlay');
+            
+            if (!navLinks || !hamburger) {
+                console.error('No se encontraron los elementos del menú');
+                return;
+            }
+            
+            navLinks.classList.toggle('active');
+            hamburger.classList.toggle('active');
+            if (overlay) overlay.classList.toggle('active');
+            
+            // Prevenir scroll del body cuando el menú está abierto
+            if (navLinks.classList.contains('active')) {
+                document.body.style.overflow = 'hidden';
+                console.log('Menú abierto');
+            } else {
+                document.body.style.overflow = '';
+                console.log('Menú cerrado');
+            }
+        }
+
+        function closeMenu() {
+            const navLinks = document.getElementById('navLinks');
+            const hamburger = document.getElementById('hamburger');
+            const overlay = document.getElementById('overlay');
+            
+            if (navLinks) navLinks.classList.remove('active');
+            if (hamburger) hamburger.classList.remove('active');
+            if (overlay) overlay.classList.remove('active');
+            document.body.style.overflow = '';
+        }
+
+        // Asegurarse de que el DOM esté cargado
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOM cargado, inicializando menú');
+            
+            // Verificar que los elementos existen
+            const hamburger = document.getElementById('hamburger');
+            const navLinks = document.getElementById('navLinks');
+            
+            if (!hamburger) {
+                console.error('No se encontró el botón hamburguesa');
+            }
+            if (!navLinks) {
+                console.error('No se encontraron los enlaces de navegación');
+            }
+        });
+
+        // Cerrar menú al cambiar el tamaño de la ventana
+        window.addEventListener('resize', function() {
+            if (window.innerWidth > 768) {
+                closeMenu();
+            }
+        });
+
+        // Cerrar menú con la tecla Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeMenu();
+            }
+        });
+
 // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
