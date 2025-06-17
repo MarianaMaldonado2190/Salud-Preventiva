@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Prevención - Salud</title>
+    <link rel="stylesheet" href="src/prevención.css">
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">Salud</div>
+            <ul class="nav-links">
+                <li><a href="index.html" >← Volver</a></li>
+                <li><a href="#test">Hacer Test</a></li>
+                <li><a href="#info">Info</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Prevención y Cuidado</h1>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. La prevención es la mejor medicina.</p>
+            <div class="hero-icons">
+                <div class="hero-icon">🏥</div>
+                <div class="hero-icon">💊</div>
+                <div class="hero-icon">🔬</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prevention Cards -->
+    <section class="prevention-section">
+        <div class="section-title">
+            <h2>Cuidados Preventivos</h2>
+        </div>
+        
+        <div class="prevention-grid">
+            <div class="prevention-card fade-in">
+                <div class="card-image">🫀</div>
+                <div class="card-content">
+                    <h3>Salud Cardiovascular</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.</p>
+                    <button class="card-button" onclick="showCardInfo('cardiovascular')">
+                        <span>Leer Más</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="prevention-card fade-in">
+                <div class="card-image" style="background: linear-gradient(45deg, #667eea, #764ba2);">🧠</div>
+                <div class="card-content">
+                    <h3>Salud Mental</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit.</p>
+                    <button class="card-button" onclick="showCardInfo('mental')">
+                        <span>Leer Más</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Info Boxes -->
+        <div class="info-boxes" id="info">
+            <div class="info-box">
+                <h3><span class="info-icon">📊</span>Estadísticas</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+            <div class="info-box">
+                <h3><span class="info-icon">⚡</span>Consejos Rápidos</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+            <div class="info-box">
+                <h3><span class="info-icon">📅</span>Rutinas</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+            <div class="info-box">
+                <h3><span class="info-icon">🎯</span>Objetivos</h3>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Test Section -->
+    <section class="test-section" id="test">
+        <div class="test-container">
+            <h2>Test de Prevención Interactivo</h2>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Responde estas preguntas para evaluar tus hábitos de prevención.</p>
+            
+            <div class="test-card">
+                <div class="test-progress">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                
+                <div class="question active" id="question1">
+                    <h3>¿Con qué frecuencia realizas ejercicio físico?</h3>
+                    <div class="answers">
+                        <button class="answer-btn" onclick="selectAnswer(1, 3)">Diariamente</button>
+                        <button class="answer-btn" onclick="selectAnswer(1, 2)">3-4 veces por semana</button>
+                        <button class="answer-btn" onclick="selectAnswer(1, 1)">1-2 veces por semana</button>
+                        <button class="answer-btn" onclick="selectAnswer(1, 0)">Nunca</button>
+                    </div>
+                </div>
+
+                <div class="question" id="question2">
+                    <h3>¿Cuántas horas duermes por noche?</h3>
+                    <div class="answers">
+                        <button class="answer-btn" onclick="selectAnswer(2, 3)">7-9 horas</button>
+                        <button class="answer-btn" onclick="selectAnswer(2, 2)">6-7 horas</button>
+                        <button class="answer-btn" onclick="selectAnswer(2, 1)">5-6 horas</button>
+                        <button class="answer-btn" onclick="selectAnswer(2, 0)">Menos de 5 horas</button>
+                    </div>
+                </div>
+
+                <div class="question" id="question3">
+                    <h3>¿Con qué frecuencia consumes frutas y verduras?</h3>
+                    <div class="answers">
+                        <button class="answer-btn" onclick="selectAnswer(3, 3)">En cada comida</button>
+                        <button class="answer-btn" onclick="selectAnswer(3, 2)">Una vez al día</button>
+                        <button class="answer-btn" onclick="selectAnswer(3, 1)">3-4 veces por semana</button>
+                        <button class="answer-btn" onclick="selectAnswer(3, 0)">Raramente</button>
+                    </div>
+                </div>
+
+                <div class="test-result" id="testResult">
+                    <div class="result-icon" id="resultIcon">🎉</div>
+                    <h3 id="resultTitle">¡Resultado!</h3>
+                    <p id="resultText">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+                    <button class="card-button" onclick="restartTest()">
+                        <span>Reiniciar Test</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Action Button -->
+    
+    <link rel="stylesheet" href="src/prevencion.js">
+    </body>
+</html>
