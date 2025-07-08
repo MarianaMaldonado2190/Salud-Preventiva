@@ -1,3 +1,11 @@
+  function scrollGrupo(id, direction) {
+    const track = document.querySelector(`#${id} .carousel-track`);
+    const scrollAmount = 300;
+    track.scrollBy({
+      left: direction * scrollAmount,
+      behavior: 'smooth'
+    });
+  }
 function toggleMenu() {
             console.log('Toggle menu clicked'); // Para debug
             const navLinks = document.getElementById('navLinks');

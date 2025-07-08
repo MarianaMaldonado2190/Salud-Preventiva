@@ -16,13 +16,13 @@
   <!-- Header -->
     <header>
         <nav>
-            <div class="logo">Salud</div>
+            <div class="logo">SentíComer</div>
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" onclick="closeMenu()">INICIO</a></li>
                 <li><a href="#about" onclick="closeMenu()">SOBRE NOSOTROS</a></li>
-                <li><a href="prevención.html" onclick="closeMenu()">PREVENCIÓN</a></li>
-                <li><a href="#sintomas" onclick="closeMenu()">SINTOMAS</a></li>
-                <li><a href="#hospitales" onclick="closeMenu()">HOSPITALES</a></li>
+                <li><a href="nutricion.html" onclick="closeMenu()">NUTRIENTES</a></li>
+                <li><a href="#alimentos" onclick="closeMenu()">ALIMENTOS</a></li>
+                <li><a href="#mensajes" onclick="closeMenu()">MENSAJES</a></li>
             </ul>
             <div class="hamburger" id="hamburger" onclick="toggleMenu()">
                 <span></span>
@@ -38,102 +38,130 @@
     <section class="hero" id="home">
         <div class="hero-content">
             <div class="hero-text">
-                <h1>Te ayudamos a mejorar</h1>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Ut enim odio, consectetur.</p>
+                <h1>Comer bien es elegirte</h1>
+                <p>SENTÍCOMER nace como un espacio digital que busca transformar el modo en que nos relacionamos con la comida. No se trata solo de contar calorías o seguir modas: se trata de volver a conectar con lo que comemos, con nuestra cultura, con el cuerpo y con el bienestar real. </p>  
+                <p> Este proyecto se basa en las Guías Alimentarias para la Población Argentina (GAPA), publicadas por el Ministerio de Salud en 2016, y busca acercar esa información clave de manera clara, interactiva y cercana a tu vida cotidiana.</p>
                 <button class="cta-button">Read More</button>
             </div>
             <div class="hero-image">
-                <div class="doctor-circle">
-                    <div class="doctor-icon">👨‍⚕️</div>
+                <div class="comida-circle">
+                    <img src="imagenes/principal.jpg" alt="Frutas y verduras" class="comida-img">
                 </div>
             </div>
         </div>
        
     </section>
-
-    <!-- Departments Section -->
-    <section class="precencion" id="prevencion">
-        <div class="section-content">
-            <div class="section-title">
-                <h2>Especialidades</h2>
-                <p>Aliquam a augue suscipit, luctus neque purus ipsum neque dolor primis libero tempus, blandit posuere and ligula varius magna a porta</p>
-            </div>
-            <div class="departments-grid">
-                <div class="department-card fade-in" id="prevencion.html" >
-                    <div class="department-icon">🔬</div>
-                    <h3>Prevención</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-                    <button class="appointment-button" id="prevencion.html">Ver Mas</button>
-
-                </div>
-                <div class="sintomas" id="sintomas">
-                <div class="department-card fade-in">
-                    <div class="department-icon">⚕️</div>
-                    <h3>Sintomas</h3>
-                    <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque</p>
-                    <button class="appointment-button" id="prevencion.html">Ver Mas</button>
-
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
+     <!-- Sobre Nosotras -->
     <section class="about" id="about">
         <div class="section-content">
             <div class="about-content">
                 <div class="about-image">
-                    👩‍⚕️
+                <img src="imagenes/chicas.jpg" alt="Frutas y verduras">
                 </div>
                 <div class="about-text">
                     <h2>Sobre Nosotros</h2>
-                    <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable.</p>
-                    <p>If you are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text.</p>
+                    <p>SÉNTICOMER es un proyecto creado por un grupo de chicas que formamos parte de la comunidad de Chicas en Tecnología, en el marco de un programa donde estamos aprendiendo a programar y crear soluciones con impacto. Decidimos enfocarnos en la salud alimentaria como una forma concreta de promover el bienestar en nuestras comunidades, apostando por la prevención y el acceso a información confiable.</p>
+                    <p>Este proyecto se vincula con los Objetivos de Desarrollo Sostenible, especialmente con el ODS 3: Salud y Bienestar, y busca acercar herramientas simples y digitales para que más personas puedan aprender a comer con sentido.</p>
                    
                 </div>
             </div>
         </div>
     </section>
+    
+<!-- sECCION EXPLICACION -->
+   <section class="prevencion" id="nutricion">
+  <div class="section-content">
+    <div class="section-title">
+      <h2>¿Qué significa "Alimentación Saludable"?</h2>
+      <p>Significa tener una alimentación que aporta todos los nutrientes esenciales y la energía necesaria para que cada persona pueda llevar adelante las actividades diarias y mantenerse sana. La alimentación debe respetar los gustos y los hábitos (la cultura) de cada persona/familia.</p>
+    </div>
 
-    <!-- Hospital Section -->
-    <section class="hospitales" id="hospitales">
-        <div class="section-content">
-            <div class="section-title">
-                <h2 style="color: white;">Hospitales publicos</h2>
-                <p style="color: rgba(255,255,255,0.8);">Quisque sagittis purus sit amet volutpat consequat mauris nunc congue nisi vitae suscipit tellus mauris a diam</p>
-            </div>
-            <div class="doctors-grid">
-                <div class="doctor-card">
-                    <div class="doctor-avatar">👨‍⚕️</div>
-                    <h3>Dr. Sarah</h3>
-                    <p>Cardiologist</p>
-                </div>
-                <div class="doctor-card">
-                    <div class="doctor-avatar">👨‍⚕️</div>
-                    <h3>Dr. John</h3>
-                    <p>Neurologist</p>
-                </div>
-                <div class="doctor-card">
-                    <div class="doctor-avatar">👩‍⚕️</div>
-                    <h3>Dr. Maria</h3>
-                    <p>Surgeon</p>
-                </div>
-            </div>
+    <div class="departments-grid">
+      <!-- Tarjeta 1 -->
+      <div class="department-card fade-in">
+        <div class="department-icon">
+          <img src="imagenes/alimento.png" alt="Frutas y verduras">
         </div>
-    </section>
+        <h3>NUTRIENTES</h3>
+        <p>Conocé qué son los nutrientes, cómo se clasifican y por qué son esenciales para tu salud.</p>
+        <button class="appointment-button" onclick="location.href='nutricion.html'">Ver más</button>
+      </div>
 
-    <!-- Map Section -->
+      <!-- Tarjeta 2 -->
+      <div class="department-card fade-in">
+        <div class="department-icon">
+          <img src="imagenes/nutrientes.png" alt="Frutas y verduras">
+        </div>
+        <h3>ALIMENTOS</h3>
+        <p>Aquí encontrarás tu guía diaria para comer bien, con todos los grupos de alimentos.</p>
+        <button class="appointment-button" onclick="location.href='nutricion.html'">Ver más</button>
+      </div>
+    </div>
+  </div>
+</section>
+
+   
+
+    <!-- MENSAJES -->
+<section class="mensajes" id="mensajes">
+  <div class="section-title">
+    <h2 style="color: rgb(54, 33, 9);">MENSAJES</h2>
+    <p style="color: rgba(48, 30, 9, 0.8);">Conocé los 10 mensajes clave para mejorar tus hábitos alimentarios y cuidar tu salud todos los días</p>
+  </div>
+
+  <div class="carousel-wrapper" id="mensajesCarrusel">
+    <button class="carousel-btn left" onclick="scrollGrupo('mensajesCarrusel', -1)">❮</button>
+
+    <div class="carousel-track">
+      <!-- PEGÁ ACÁ tus 10 tarjetas -->
+      <div class="doctor-card"><div class="doctor-avatar">
+        <img src="imagenes/ejercicio.png" alt="ejercicio">
+      </div><h3>Mensaje 1</h3><p>Comé alimentos de todos los grupos y hacé al menos 30 minutos de actividad física al día</p></div>
+      <div class="doctor-card"><div class="doctor-avatar">
+        <img src="imagenes/agua.jpg" alt="agua">
+      </div><h3>Mensaje 2</h3><p>Tomá 8 vasos de agua segura por día.</p></div>
+      <div class="doctor-card"><div class="doctor-avatar">
+        <img src="imagenes/fruta.jpg" alt="frutas">
+      </div><h3>Mensaje 3</h3><p>Sumá 5 porciones de frutas y verduras de distintos colores.</p></div>
+      <div class="doctor-card"><div class="doctor-avatar">
+        <img src="imagenes/sal.jpg" alt="sal">
+      </div><h3>Mensaje 4</h3><p>Reducí la sal y los alimentos con sodio.</p></div>
+      <div class="doctor-card"><div class="doctor-avatar">
+        <img src="imagenes/grasas.jpg" alt="azucar">
+      </div><h3>Mensaje 5</h3><p>Limitá ultraprocesados y bebidas azucaradas.</p></div>
+      <div class="doctor-card"><div class="doctor-avatar">
+        <img src="imagenes/leche.jpg" alt="Lácteos">
+      </div><h3>Mensaje 6</h3><p>Lácteos descremados todos los días.</p></div>
+      <div class="doctor-card"><div class="doctor-avatar">
+        <img src="imagenes/carne.jpg" alt="carne">
+      </div><h3>Mensaje 7</h3><p>Comé carnes sin grasa visible. Sumá pescado y huevo.</p></div>
+      <div class="doctor-card"><div class="doctor-avatar">
+        <img src="imagenes/cereales.jpg" alt="cereales">
+      </div><h3>Mensaje 8</h3><p>Incorporá legumbres, cereales integrales y raíces.</p></div>
+      <div class="doctor-card"><div class="doctor-avatar">
+        <img src="imagenes/aceite.jpg" alt="aceite">
+      </div><h3>Mensaje 9</h3><p>Usá aceite crudo, frutas secas o semillas.</p></div>
+      <div class="doctor-card"><div class="doctor-avatar">
+        <img src="imagenes/alcohol.jpg" alt="alcohol">
+      </div><h3>Mensaje 10</h3><p>Consumí alcohol con responsabilidad o evitálo.</p></div>
+    </div>
+
+    <button class="carousel-btn right" onclick="scrollGrupo('mensajesCarrusel', 1)">❯</button>
+  </div>
+</section>
+
+    <!-- SECCIÓN ENVASES -->
     <section class="map-section">
         <div class="section-content">
             <div class="map-content">
                 <div class="map-placeholder">
-                    📍 Interactive Map Here
+                    Rótulo Nutricional de Envasados
                 </div>
                 <div class="testimonial-card">
                     <div class="testimonial-avatar">👤</div>
-                    <h3>TESTIMONIAL</h3>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tempus vestibulum mauris quis aliquam. Ut enim odio, consectetur mollis placerat.</p>
-                    <p><strong>- Patient Name</strong></p>
+                    <h3>Lista de Ingredientes</h3>
+                    <p>Atrevete a conocer cuanto sabés acerca de los alimentos respondiendo este divertido cuestionario.</p>
+                    <p><strong>Conocé los mitos más famosos</strong></p>
                 </div>
             </div>
         </div>
@@ -148,17 +176,17 @@
                     <ul>
                         <li><a href="#home">INICIO</a></li>
                         <li><a href="#about">SOBRE NOSOTROS</a></li>
-                        <li><a href="prevención.html">PREVENCIÓN</a></li>
-                        <li><a href="#sintomas">SINTOMAS</a></li>
-                        <li><a href="#hospitales">HOSPITALES</a></li>
+                        <li><a href="nutricion.html">NUTRIENTES</a></li>
+                        <li><a href="#alimentos">ALIMENTOS</a></li>
+                        <li><a href="#envases">ENVASES</a></li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>Services</h3>
+                    <h3>Servicios</h3>
                     <ul>
-                        <li><a href="#prevención.html">Prevención</a></li>
-                        <li><a href="#sintimas">Sintomas</a></li>
-                        <li><a href="#hospitales">Hospitales</a></li>
+                        <li><a href="#nutricion.html">NUTRIENTES</a></li>
+                        <li><a href="#alimentos">ALIMENTOS</a></li>
+                        <li><a href="#mensajes">MENSAJES</a></li>
                     </ul>
                 </div>            
               </div>
@@ -167,5 +195,6 @@
         </div>
     </footer>
     <script src="src/main.js"></script>
+
 </body>
 </html>
