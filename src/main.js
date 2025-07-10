@@ -110,16 +110,7 @@ function toggleMenu() {
         });
 
         // Newsletter form handling
-        document.querySelector('.newsletter-button').addEventListener('click', function(e) {
-            e.preventDefault();
-            const email = document.querySelector('.newsletter-input').value;
-            if (email) {
-                alert('¡Gracias por suscribirte a nuestro newsletter!');
-                document.querySelector('.newsletter-input').value = '';
-            } else {
-                alert('Por favor, ingresa tu email.');
-            }
-        });
+       
 
         // Appointment booking
         document.querySelector('.appointment-button').addEventListener('click', function() {
@@ -140,27 +131,173 @@ function toggleMenu() {
         });
 
         // Mobile menu toggle (for future enhancement)
-        let mobileMenuOpen = false;
-        document.querySelector('.search-icon').addEventListener('click', function() {
+       // let mobileMenuOpen = false;
+        //document.querySelector('.search-icon').addEventListener('click', function() {
             // This could be expanded to show a search modal
-            alert('Funcionalidad de búsqueda');
-        });
+          //  alert('Funcionalidad de búsqueda');
+       // });
 
         // Header background change on scroll
         window.addEventListener('scroll', function() {
             const header = document.querySelector('header');
             if (window.scrollY > 100) {
-                header.style.background = 'rgba(20, 184, 166, 0.95)';
+                header.style.background = 'rgba(19, 58, 59, 0.3)';
                 header.style.backdropFilter = 'blur(10px)';
             } else {
-                header.style.background = 'linear-gradient(135deg, #4fd1c7 0%, #14b8a6 100%)';
+                header.style.background = 'linear-gradient(135deg, #051F20 0%, #163832 50%,rgb(31, 61, 54) 100%)';
                 header.style.backdropFilter = 'none';
             }
         });
 
+let currentQuestion = 1;
+        let totalScore = 0;
+        const totalQuestions = 10;
 
-        ///PREVENCION///
+        // Inicializar el test
+        function initTest() {
+            updateProgress();
+            updateQuestionCounter();
+            attachEventListeners();
+        }
 
+        // Actualizar barra de progreso
+        function updateProgress() {
+            const progressBar = document.getElementById('progressBar');
+            const progressPercentage = (currentQuestion / totalQuestions) * 100;
+            progressBar.style.width = progressPercentage + '%';
+        }
 
+        // Actualizar contador de preguntas
+        function updateQuestionCounter() {
+            const counter = document.getElementById('questionCounter');
+            counter.textContent = `${currentQuestion} / ${totalQuestions}`;
+        }
 
-        
+        // Agregar event listeners a los botones
+        function attachEventListeners() {
+            const answerButtons = document.querySelectorAll('.answer-btn');
+            answerButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    handleAnswer(this);
+                });
+            });
+        }
+
+        // Manejar respuesta
+        function handleAnswer(button) {
+            const points = parseInt(button.dataset.points);
+            totalScore += points;
+
+            // Mostrar feedback visual
+            button.style.background = '#235347';
+            button.style.color = 'white';
+
+            // Esperar un poco antes de continuar
+            setTimeout(() => {
+                if (currentQuestion < totalQuestions) {
+                    nextQuestion();
+                } else {
+                    showResult();
+                }
+            }, 500);
+        }
+
+        // Ir a la siguiente pregunta
+        function nextQuestion() {
+            // Ocultar pregunta actual
+            const currentQuestionElement = document.getElementById(`question${currentQuestion}`);
+            currentQuestionElement.classList.remove('active');
+
+            // Mostrar siguiente pregunta
+            currentQuestion++;
+            const nextQuestionElement = document.getElementById(`question${currentQuestion}`);
+            nextQuestionElement.classList.add('active');
+
+            // Actualizar progreso
+            updateProgress();
+            updateQuestionCounter();
+        }
+
+        // Mostrar resultado
+        function showResult() {
+            // Ocultar última pregunta
+            const lastQuestion = document.getElementById(`question${currentQuestion}`);
+            lastQuestion.classList.remove('active');
+
+            // Mostrar resultado
+            const resultElement = document.getElementById('testResult');
+            resultElement.classList.add('active');
+
+            // Actualizar progreso al 100%
+            const progressBar = document.getElementById('progressBar');
+            progressBar.style.width = '100%';
+
+            // Ocultar contador
+            const counter = document.getElementById('questionCounter');
+            counter.style.display = 'none';
+
+            // Determinar resultado
+            displayResult();
+        }
+
+        // Mostrar resultado basado en el puntaje
+        function displayResult() {
+            const resultTitle = document.getElementById('resultTitle');
+            const resultText = document.getElementById('resultText');
+            const resultIcon = document.querySelector('.result-icon');
+
+            if (totalScore >= 8) {
+                resultIcon.textContent = '🌟';
+                resultTitle.textContent = '¡Excelente!';
+                resultTitle.style.color = '#235347';
+                resultText.innerHTML = `<strong>Puntuación: ${totalScore}/10</strong><br><br>¡Felicitaciones! Tenés hábitos alimentarios muy saludables. Seguí así, tu cuerpo te lo agradece. Solo recordá mantener la constancia y seguir disfrutando de una alimentación variada y equilibrada.`;
+            } else if (totalScore >= 5) {
+                resultIcon.textContent = '🌱';
+                resultTitle.textContent = '¡Buen trabajo!';
+                resultTitle.style.color = '#8EB69B';
+                resultText.innerHTML = `<strong>Puntuación: ${totalScore}/10</strong><br><br>Vas por buen camino. Tenés algunos hábitos saludables establecidos, pero hay espacio para mejorar. Te sugerimos revisar los mensajes de las GAPA y hacer pequeños cambios graduales en tu rutina diaria.`;
+            } else {
+                resultIcon.textContent = '🌿';
+                resultTitle.textContent = '¡Empezá el cambio!';
+                resultTitle.style.color = '#163832';
+                resultText.innerHTML = `<strong>Puntuación: ${totalScore}/10</strong><br><br>Es momento de hacer algunos cambios importantes en tu alimentación. No te desanimes, cada pequeño paso cuenta. Te recomendamos empezar con cambios simples como tomar más agua y agregar más frutas y verduras a tu dieta.`;
+            }
+        }
+
+        // Reiniciar test
+        function restartTest() {
+            currentQuestion = 1;
+            totalScore = 0;
+
+            // Ocultar resultado
+            const resultElement = document.getElementById('testResult');
+            resultElement.classList.remove('active');
+
+            // Mostrar primera pregunta
+            const firstQuestion = document.getElementById('question1');
+            firstQuestion.classList.add('active');
+
+            // Ocultar todas las otras preguntas
+            for (let i = 2; i <= totalQuestions; i++) {
+                const question = document.getElementById(`question${i}`);
+                question.classList.remove('active');
+            }
+
+            // Resetear estilos de botones
+            const answerButtons = document.querySelectorAll('.answer-btn');
+            answerButtons.forEach(button => {
+                button.style.background = 'white';
+                button.style.color = '#235347';
+            });
+
+            // Mostrar contador
+            const counter = document.getElementById('questionCounter');
+            counter.style.display = 'block';
+
+            // Actualizar progreso
+            updateProgress();
+            updateQuestionCounter();
+        }
+
+        // Inicializar cuando se carga la página
+        document.addEventListener('DOMContentLoaded', initTest);

@@ -150,22 +150,114 @@
   </div>
 </section>
 
-    <!-- SECCIÓN ENVASES -->
-    <section class="map-section">
-        <div class="section-content">
-            <div class="map-content">
-                <div class="map-placeholder">
-                    Rótulo Nutricional de Envasados
-                </div>
-                <div class="testimonial-card">
-                    <div class="testimonial-avatar">👤</div>
-                    <h3>Lista de Ingredientes</h3>
-                    <p>Atrevete a conocer cuanto sabés acerca de los alimentos respondiendo este divertido cuestionario.</p>
-                    <p><strong>Conocé los mitos más famosos</strong></p>
+   <!-- SECCIÓN TEST INTERACTIVO -->
+ <main class="main-content">
+        <section class="test-section" id="test">
+            <div class="test-container">
+                <h2>Test de Alimentación Saludable</h2>
+                <p>Descubrí cómo mejorar tus hábitos alimenticios respondiendo estas preguntas</p>
+
+                <div class="test-card">
+                    <div class="question-counter" id="questionCounter">1 / 10</div>
+                    
+                    <div class="test-progress">
+                        <div class="progress-bar" id="progressBar"></div>
+                    </div>
+
+                    <!-- PREGUNTAS -->
+                    <div class="question active" id="question1">
+                        <h3>¿Consumís alimentos de todos los grupos y hacés actividad física?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" data-points="1">Sí, siempre</button>
+                            <button class="answer-btn" data-points="0">A veces</button>
+                            <button class="answer-btn" data-points="0">Raramente</button>
+                        </div>
+                    </div>
+
+                    <div class="question" id="question2">
+                        <h3>¿Tomás al menos 8 vasos de agua segura al día?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" data-points="1">Sí</button>
+                            <button class="answer-btn" data-points="0">No</button>
+                        </div>
+                    </div>
+
+                    <div class="question" id="question3">
+                        <h3>¿Consumís 5 porciones de frutas y verduras de distintos colores?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" data-points="1">Sí</button>
+                            <button class="answer-btn" data-points="0">No</button>
+                        </div>
+                    </div>
+
+                    <div class="question" id="question4">
+                        <h3>¿Reducís la sal y alimentos con sodio?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" data-points="1">Sí</button>
+                            <button class="answer-btn" data-points="0">No</button>
+                        </div>
+                    </div>
+
+                    <div class="question" id="question5">
+                        <h3>¿Limitás ultraprocesados y bebidas azucaradas?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" data-points="1">Sí</button>
+                            <button class="answer-btn" data-points="0">No</button>
+                        </div>
+                    </div>
+
+                    <div class="question" id="question6">
+                        <h3>¿Consumís lácteos descremados todos los días?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" data-points="1">Sí</button>
+                            <button class="answer-btn" data-points="0">No</button>
+                        </div>
+                    </div>
+
+                    <div class="question" id="question7">
+                        <h3>¿Comés carnes sin grasa visible y sumás pescado y huevo?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" data-points="1">Sí</button>
+                            <button class="answer-btn" data-points="0">No</button>
+                        </div>
+                    </div>
+
+                    <div class="question" id="question8">
+                        <h3>¿Incorporás legumbres, cereales integrales y raíces?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" data-points="1">Sí</button>
+                            <button class="answer-btn" data-points="0">No</button>
+                        </div>
+                    </div>
+
+                    <div class="question" id="question9">
+                        <h3>¿Usás aceite crudo, frutas secas o semillas?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" data-points="1">Sí</button>
+                            <button class="answer-btn" data-points="0">No</button>
+                        </div>
+                    </div>
+
+                    <div class="question" id="question10">
+                        <h3>¿Consumís alcohol con responsabilidad o lo evitás?</h3>
+                        <div class="answers">
+                            <button class="answer-btn" data-points="1">Sí</button>
+                            <button class="answer-btn" data-points="0">No</button>
+                        </div>
+                    </div>
+
+                    <!-- RESULTADO -->
+                    <div class="test-result" id="testResult">
+                        <div class="result-icon">🌱</div>
+                        <h3 id="resultTitle">¡Resultado!</h3>
+                        <p id="resultText"></p>
+                        <button class="card-button" onclick="restartTest()">Reiniciar Test</button>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
+
 
     <!-- Footer -->
     <footer class="contact" id="contact">
