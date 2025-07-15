@@ -65,5 +65,6 @@ SentíComer no busca contar calorías ni seguir modas, sino **volver a conectar 
 ---
 ### Para Vizualizar
 https://salud-preventiva-team10.netlify.app/
+---
 **¡Gracias por formar parte de SentíComer!** 🌿✨
 
