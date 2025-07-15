@@ -108,15 +108,6 @@ function toggleMenu() {
             card.style.transition = 'opacity 0.8s ease, transform 0.8s ease';
             observer.observe(card);
         });
-
-        // Newsletter form handling
-       
-
-        // Appointment booking
-        document.querySelector('.appointment-button').addEventListener('click', function() {
-            alert('Funcionalidad de reserva de citas - Aquí se abriría un formulario o modal');
-        });
-
         // CTA buttons
         document.querySelectorAll('.cta-button').forEach(button => {
             button.addEventListener('click', function() {
@@ -301,3 +292,58 @@ let currentQuestion = 1;
 
         // Inicializar cuando se carga la página
         document.addEventListener('DOMContentLoaded', initTest);
+
+        let comments = [];
+
+document.getElementById('commentForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+
+  const name = document.getElementById('name').value.trim();
+  const comment = document.getElementById('comment').value.trim();
+
+  if (name && comment) {
+    const newComment = {
+      id: Date.now(),
+      name: name,
+      comment: comment,
+      timestamp: new Date().toLocaleString()
+    };
+
+    comments.push(newComment);
+    displayComments();
+
+    // Reset form
+    document.getElementById('commentForm').reset();
+  }
+});
+
+function displayComments() {
+  const commentsSection = document.getElementById('commentsSection');
+  const commentsList = document.getElementById('commentsList');
+
+  commentsSection.style.display = 'block';
+
+  // Limpiar lista antes de renderizar de nuevo
+  commentsList.innerHTML = '';
+
+  comments.forEach(c => {
+    const commentDiv = document.createElement('div');
+    commentDiv.classList.add('comment');
+    commentDiv.innerHTML = `
+      <p class="comment-author">${c.name} — <span style="font-size:0.8em;">${c.timestamp}</span></p>
+      <p class="comment-text">${c.comment}</p>
+    `;
+    commentsList.appendChild(commentDiv);
+  });
+}
+// Guardar en localStorage
+localStorage.setItem('comments', JSON.stringify(comments));
+
+// Recuperar al inicio
+document.addEventListener('DOMContentLoaded', () => {
+  const stored = localStorage.getItem('comments');
+  if (stored) {
+    comments = JSON.parse(stored);
+    displayComments();
+  }
+});

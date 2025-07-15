@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="data:image/svg+xml,
+    <svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'>
+        <circle cx='50' cy='50' r='50' fill='%23ffffff'/>
+        <text x='50' y='65' font-size='60' text-anchor='middle' font-family='Arial, sans-serif'>👨‍⚕️</text>
+    </svg>">
+    <title>SantíComer - Alimentos</title>
+    <link rel="stylesheet" href="alimentos.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav>
+            <div class="logo">SentíComer</div>
+            <ul class="nav-links">
+                <li><a href="index.html">← Volver</a></li>
+                <li><a href="#info">Tips</a></li>
+                <li><a href="#test">Test</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>Comidas durante tu día</h1>
+            <p>Distribuye diferentes grupos de alimentos durante el día con opciones que te ayudarán a estar saludable.</p>
+            <div class="hero-icons">
+                <div class="hero-icon">🍎​</div>
+                <div class="hero-icon">🍝​</div>
+                <div class="hero-icon">🥛​</div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Prevention Cards -->
+    <section class="prevention-section">
+        <div class="section-title">
+            <h2>Comidas</h2>
+        </div>
+        
+        <div class="prevention-grid">
+            <!-- Desayuno -->
+            <div class="prevention-card fade-in">
+                <div class="card-image">
+                    <div class="comida-circle">
+                        <img src="img/desayuno.jpg" alt="desayuno">
+                    </div>
+                </div>
+                <div class="card-content" id="desayuno-content">
+                    <h3>Desayuno</h3>
+                    <p>Realiza diariamente el desayuno con alimentos frescos, integrales, variados, se asocia a un mejor rendimiento físico e intelectual.</p>
+                    <button class="card-button" onclick="showInfo('desayuno')">
+                        <span>Leer Más</span>
+                    </button>
+                    <!-- Contenedor para la información adicional -->
+                    <div id="desayuno-info" class="extra-info"></div>
+                </div>
+            </div>
+
+            <!-- Almuerzo -->
+            <div class="prevention-card fade-in">
+                <div class="card-image" style="background: linear-gradient(45deg, #667eea, #764ba2);">
+                    <div class="comida-circle">
+                        <img src="img/almuerzo.jpeg" alt="almuerzo">
+                    </div>
+                </div>
+                <div class="card-content" id="almuerzo-content">
+                    <h3>Almuerzo</h3>
+                    <p>Las porciones del almuerzo deben adecuarse a cada persona, edad, actividad laboral y personal, clima, etc. Su distribución en el plato es la misma en adultos y niños.</p>
+                    <button class="card-button" onclick="showInfo('almuerzo')">
+                        <span>Leer Más</span>
+                    </button>
+                    <!-- Contenedor para la información adicional -->
+                    <div id="almuerzo-info" class="extra-info"></div>
+                </div>
+            </div>
+
+            <!-- Merienda -->
+            <div class="prevention-card fade-in">
+                <div class="card-image">
+                    <div class="comida-circle">
+                        <img src="img/tomate.jpeg" alt="merienda">
+                    </div>
+                </div>
+                <div class="card-content" id="merienda-content">
+                    <h3>Merienda</h3>
+                    <p>La merienda acorta el tiempo de ayuno entre el almuerzo y la cena, controlando el apetito y evitando así un consumo mayor de alimentos en la última comida del día.</p>
+                    <button class="card-button" onclick="showInfo('merienda')">
+                        <span>Leer Más</span>
+                    </button>
+                    <!-- Contenedor para la información adicional -->
+                    <div id="merienda-info" class="extra-info"></div>
+                </div>
+            </div>
+
+            <!-- Cena -->
+            <div class="prevention-card fade-in">
+                <div class="card-image" style="background: linear-gradient(45deg, #667eea, #764ba2);">
+                    <div class="comida-circle">
+                        <img src="img/cena.jpeg" alt="cena">
+                    </div>
+                </div>
+                <div class="card-content" id="cena-content">
+                    <h3>Cena</h3>
+                    <p>Las porciones de la cena deben adecuarse a cada persona, edad, actividad laboral y personal, clima, etc. Su distribución en el plato es la misma en adultos y niños.</p>
+                    <button class="card-button" onclick="showInfo('cena')">
+                        <span>Leer Más</span>
+                    </button>
+                    <!-- Contenedor para la información adicional -->
+                    <div id="cena-info" class="extra-info"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+<!-- Info Boxes -->
+<div class="section-title">
+    <h2>Tips</h2>
+</div>
+
+<div class="info-boxes" id="info">
+    <div class="info-box">
+        <div class="info-box-img">
+            <img src="img/agua.jpeg" alt="Agua Segura">
+        </div>
+        <h3>Agua Segura</h3>
+        <p>Se recomienda consumir 8 vasos durante el día.</p>
+        <button class="toggle-btn">Leer Más</button>
+        <div class="info-details">
+            <p>Para potabilizar el agua puedes:</p>
+            <ul>
+                <li>Opción A: Coloca 2 gotas de lavandina por cada 1 litro de agua y dejarla reposar 30 minutos antes de consumirla.</li>
+                <li>Opción B: Hervir el agua durante 3 minutos y esperar que se enfríe para beberla.</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Info Box para Frutas -->
+    <div class="info-box">
+        <div class="info-box-img">
+            <img src="img/frutas.jpeg" alt="Frutas">
+        </div>
+        <h3>Frutas y Verduras</h3>
+        <p>Es importante consumir 5 porciones de frutas y verduras en variedad de tipo y color.</p>
+        <button class="toggle-btn">Leer Más</button>
+        <div class="info-details">
+            <p>Recuerda que:</p>
+            <ul>
+                <li>Frutas: 1 porción equivale a 1 unidad mediana o 1 taza mediana.</li>
+                <li>Verduras frescas: 1 porción equivale a 1/2 plato.</li>
+                <li>Verduras cocidas: 1 porción equivale a 1/2 plato.</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Info Box para Lácteos -->
+    <div class="info-box">
+        <div class="info-box-img">
+            <img src="img/quesos.jpeg" alt="Lácteos">
+        </div>
+        <h3>Lácteos</h3>
+        <p>Consumir 3 veces al día y es importante su conservación en la heladera.</p>
+        <button class="toggle-btn">Leer Más</button>
+        <div class="info-details">
+            <p>1 porción equivale a:</p>
+            <ul>
+                <li>1 taza de leche líquida de 200-250cc.</li>
+                <li>3 cucharadas soperas al ras de leche en polvo.</li>
+                <li>1 porción de queso fresco tamaño cajita de fósforo.</li>
+                <li>3 fetas de queso de máquina.</li>
+                <li>6 cucharadas al ras soperas de queso untable.</li>
+                <li>3 cucharadas al ras de queso rallado.</li>
+                <li>4 cucharadas al ras de ricota.</li>
+            </ul>
+        </div>
+    </div>
+    <!-- Info Box para Aceites -->
+    <div class="info-box">
+        <div class="info-box-img">
+            <img src="img/nuezes.jpeg" alt="Aceites y Semillas">
+        </div>
+        <h3>Aceites, Frutas Secas y Semillas</h3>
+        <p>Este grupo es importante por la cantidad de grasas insaturadas sin colesterol.</p>
+        <button class="toggle-btn">Leer Más</button>
+        <div class="info-details">
+            <p>Se recomienda consumir por día:</p>
+            <ul>
+                <li>2 cucharadas soperas de aceite crudo para condimentar las comidas.</li>
+                <li>1 porción de semillas que equivale a 1 cucharada sopera.</li>
+                <li>1 porción de frutas secas que equivale a 1 puñado.</li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+    <!-- Interactive Test Section -->
+    <section class="test-section" id="test">
+        <div class="test-container">
+            <h2>Test de Prevención Interactivo</h2>
+            <p>Responde estas preguntas para evaluar tus hábitos de prevención.</p>
+            
+            <div class="test-card">
+                <div class="test-progress">
+                    <div class="progress-bar" id="progressBar"></div>
+                </div>
+                
+                <div class="question active" id="question1">
+                    <h3>¿Con qué frecuencia realizas ejercicio físico?</h3>
+                    <div class="answers">
+                        <button class="answer-btn" onclick="selectAnswer(1, 3)">Diariamente</button>
+                        <button class="answer-btn" onclick="selectAnswer(1, 2)">3-4 veces por semana</button>
+                        <button class="answer-btn" onclick="selectAnswer(1, 1)">1-2 veces por semana</button>
+                        <button class="answer-btn" onclick="selectAnswer(1, 0)">Nunca</button>
+                    </div>
+                </div>
+
+                <div class="question" id="question2">
+                    <h3>¿Cuántas horas duermes por noche?</h3>
+                    <div class="answers">
+                        <button class="answer-btn" onclick="selectAnswer(2, 3)">7-9 horas</button>
+                        <button class="answer-btn" onclick="selectAnswer(2, 2)">6-7 horas</button>
+                        <button class="answer-btn" onclick="selectAnswer(2, 1)">5-6 horas</button>
+                        <button class="answer-btn" onclick="selectAnswer(2, 0)">Menos de 5 horas</button>
+                    </div>
+                </div>
+
+                <div class="question" id="question3">
+                    <h3>¿Con qué frecuencia consumes frutas y verduras?</h3>
+                    <div class="answers">
+                        <button class="answer-btn" onclick="selectAnswer(3, 3)">En cada comida</button>
+                        <button class="answer-btn" onclick="selectAnswer(3, 2)">Una vez al día</button>
+                        <button class="answer-btn" onclick="selectAnswer(3, 1)">3-4 veces por semana</button>
+                        <button class="answer-btn" onclick="selectAnswer(3, 0)">Raramente</button>
+                    </div>
+                </div>
+
+                <div class="test-result" id="testResult">
+                    <div class="result-icon" id="resultIcon">🎉</div>
+                    <h3 id="resultTitle">¡Resultado!</h3>
+                    <p id="resultText">Conoce si estás en buen camino para tener una vida saludable.</p>
+                    <button class="card-button" onclick="restartTest()">
+                        <span>Reiniciar Test</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Floating Action Button -->
+    <!-- Floating Action Button -->
+    <script src="alimentos.js"></script>
+</body>
+</html>

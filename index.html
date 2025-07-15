@@ -20,8 +20,8 @@
             <ul class="nav-links" id="navLinks">
                 <li><a href="#home" onclick="closeMenu()">INICIO</a></li>
                 <li><a href="#about" onclick="closeMenu()">SOBRE NOSOTROS</a></li>
-                <li><a href="nutricion.html" onclick="closeMenu()">NUTRIENTES</a></li>
-                <li><a href="#alimentos" onclick="closeMenu()">ALIMENTOS</a></li>
+                <li><a href="Nutrientes/nutrientes.html" onclick="closeMenu()">NUTRIENTES</a></li>
+                <li><a href="Alimentos/alimentos.html" onclick="closeMenu()">ALIMENTOS</a></li>
                 <li><a href="#mensajes" onclick="closeMenu()">MENSAJES</a></li>
             </ul>
             <div class="hamburger" id="hamburger" onclick="toggleMenu()">
@@ -40,9 +40,7 @@
             <div class="hero-text">
                 <h1>Comer bien es elegirte</h1>
                 <p>SENTÍCOMER nace como un espacio digital que busca transformar el modo en que nos relacionamos con la comida. No se trata solo de contar calorías o seguir modas: se trata de volver a conectar con lo que comemos, con nuestra cultura, con el cuerpo y con el bienestar real. </p>  
-                <p> Este proyecto se basa en las Guías Alimentarias para la Población Argentina (GAPA), publicadas por el Ministerio de Salud en 2016, y busca acercar esa información clave de manera clara, interactiva y cercana a tu vida cotidiana.</p>
-                <button class="cta-button">Read More</button>
-            </div>
+                <p> Este proyecto se basa en las Guías Alimentarias para la Población Argentina (GAPA), publicadas por el Ministerio de Salud en 2016, y busca acercar esa información clave de manera clara, interactiva y cercana a tu vida cotidiana.</p>            </div>
             <div class="hero-image">
                 <div class="comida-circle">
                     <img src="imagenes/principal.jpg" alt="Frutas y verduras" class="comida-img">
@@ -51,22 +49,7 @@
         </div>
        
     </section>
-     <!-- Sobre Nosotras -->
-    <section class="about" id="about">
-        <div class="section-content">
-            <div class="about-content">
-                <div class="about-image">
-                <img src="imagenes/chicas.jpg" alt="Frutas y verduras">
-                </div>
-                <div class="about-text">
-                    <h2>Sobre Nosotros</h2>
-                    <p>SÉNTICOMER es un proyecto creado por un grupo de chicas que formamos parte de la comunidad de Chicas en Tecnología, en el marco de un programa donde estamos aprendiendo a programar y crear soluciones con impacto. Decidimos enfocarnos en la salud alimentaria como una forma concreta de promover el bienestar en nuestras comunidades, apostando por la prevención y el acceso a información confiable.</p>
-                    <p>Este proyecto se vincula con los Objetivos de Desarrollo Sostenible, especialmente con el ODS 3: Salud y Bienestar, y busca acercar herramientas simples y digitales para que más personas puedan aprender a comer con sentido.</p>
-                   
-                </div>
-            </div>
-        </div>
-    </section>
+     
     
 <!-- sECCION EXPLICACION -->
    <section class="prevencion" id="nutricion">
@@ -84,7 +67,7 @@
         </div>
         <h3>NUTRIENTES</h3>
         <p>Conocé qué son los nutrientes, cómo se clasifican y por qué son esenciales para tu salud.</p>
-        <button class="appointment-button" onclick="location.href='nutricion.html'">Ver más</button>
+        <button class="appointment-button" onclick="location.href='Nutrientes/nutrientes.html'">Ver más</button>
       </div>
 
       <!-- Tarjeta 2 -->
@@ -94,7 +77,7 @@
         </div>
         <h3>ALIMENTOS</h3>
         <p>Aquí encontrarás tu guía diaria para comer bien, con todos los grupos de alimentos.</p>
-        <button class="appointment-button" onclick="location.href='nutricion.html'">Ver más</button>
+        <button class="appointment-button" onclick="location.href='Alimentos/alimentos.html'">Ver más</button>
       </div>
     </div>
   </div>
@@ -149,8 +132,7 @@
     <button class="carousel-btn right" onclick="scrollGrupo('mensajesCarrusel', 1)">❯</button>
   </div>
 </section>
-
-   <!-- SECCIÓN TEST INTERACTIVO -->
+<!-- SECCIÓN TEST INTERACTIVO -->
  <main class="main-content">
         <section class="test-section" id="test">
             <div class="test-container">
@@ -257,35 +239,84 @@
             </div>
         </section>
     </main>
+    
 
-
-    <!-- Footer -->
-    <footer class="contact" id="contact">
+<!-- Sobre Nosotras -->
+    <section class="about" id="about">
         <div class="section-content">
-            <div class="footer-content">
-                <div class="footer-section">
-                    <h3>Links</h3>
-                    <ul>
-                        <li><a href="#home">INICIO</a></li>
-                        <li><a href="#about">SOBRE NOSOTROS</a></li>
-                        <li><a href="nutricion.html">NUTRIENTES</a></li>
-                        <li><a href="#alimentos">ALIMENTOS</a></li>
-                        <li><a href="#envases">ENVASES</a></li>
-                    </ul>
+            <div class="about-content">
+                <div class="about-image">
+                <img src="imagenes/chicas.jpg" alt="Frutas y verduras">
                 </div>
-                <div class="footer-section">
-                    <h3>Servicios</h3>
-                    <ul>
-                        <li><a href="#nutricion.html">NUTRIENTES</a></li>
-                        <li><a href="#alimentos">ALIMENTOS</a></li>
-                        <li><a href="#mensajes">MENSAJES</a></li>
-                    </ul>
-                </div>            
-              </div>
-             <div class="footer-content">
-                <p>&copy; 2025 Todos los derechos reservados.</p>
+                <div class="about-text">
+                    <h2>Sobre Nosotros</h2>
+                    <p>SÉNTICOMER es un proyecto creado por un grupo de chicas que formamos parte de la comunidad de Chicas en Tecnología, en el marco de un programa donde estamos aprendiendo a programar y crear soluciones con impacto. Decidimos enfocarnos en la salud alimentaria como una forma concreta de promover el bienestar en nuestras comunidades, apostando por la prevención y el acceso a información confiable.</p>
+                    <p>Este proyecto se vincula con los Objetivos de Desarrollo Sostenible, especialmente con el ODS 3: Salud y Bienestar, y busca acercar herramientas simples y digitales para que más personas puedan aprender a comer con sentido.</p>
+                   
+                </div>
+            </div>
         </div>
-    </footer>
+    </section>
+<div class="comments-wrapper">
+    <div class="form-container fade-in" id="comentarios">
+        <h2 style="color: #8EB69B; margin-bottom: 20px;">💬 Déjanos tu Comentario</h2>
+        <p style="margin-bottom: 20px;">Queremos conocer tu opinión sobre nuestros consejos nutricionales o si tienes alguna pregunta sobre alimentación saludable.</p>
+        
+        <form id="commentForm">
+            <div class="form-group">
+                <label for="name">Nombre:</label>
+                <input type="text" id="name" name="name" required placeholder="Escribe tu nombre aquí">
+            </div>
+            
+            <div class="form-group">
+                <label for="comment">Comentario:</label>
+                <textarea id="comment" name="comment" required placeholder="Comparte tu opinión, pregunta o experiencia sobre nutrición..."></textarea>
+            </div>
+            
+            <button type="submit" class="submit-btn">Enviar Comentario</button>
+        </form>
+    </div>
+
+    <div class="comments-section fade-in" id="commentsSection">
+        <h2 style="color: #235347; margin-bottom: 20px;">📝 Comentarios</h2>
+        <div id="commentsList"></div>
+    </div>
+</div>
+
+   
+    <!-- Footer Compacto -->
+<footer class="contact" id="contact">
+    <div class="section-content">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>🌱 Nutrición Saludable</h3>
+                <p>Promovemos un estilo de vida saludable a través de consejos nutricionales respaldados por la ciencia.</p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>📧 Contacto</h3>
+                <p>SentíComer@gmail.com</p>
+                <p>+54 (9) 11 1234-4567 </p>
+            </div>
+            
+            <div class="footer-section">
+                <h3>Links</h3>
+                <ul>
+                    <li><a href="#home">INICIO</a></li>
+                    <li><a href="#about">SOBRE NOSOTROS</a></li>
+                    <li><a href="Nutrientes/nutrientes.html">NUTRIENTES</a></li>
+                    <li><a href="Alimentos/alimentos.html">ALIMENTOS</a></li>
+                    <li><a href="#mensajes">MENSAJES</a></li>
+
+                </ul>
+            </div>
+        </div>
+        
+        <div class="footer-content">
+            <p>&copy; 2025 Todos los derechos reservados.</p>
+        </div>
+    </div>
+</footer>
     <script src="src/main.js"></script>
 
 </body>
