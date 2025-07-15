@@ -58,12 +58,12 @@ SentíComer no busca contar calorías ni seguir modas, sino **volver a conectar 
 
 ## 📌 Créditos al Grupo 10-B
 
-### Para Vizualizar
-https://salud-preventiva-team10.netlify.app/
+
 
 > Proyecto desarrollado en base a la **GAPA** — Ministerio de Salud de la Nación Argentina (2016).
 
 ---
-
+### Para Vizualizar
+https://salud-preventiva-team10.netlify.app/
 **¡Gracias por formar parte de SentíComer!** 🌿✨
 
